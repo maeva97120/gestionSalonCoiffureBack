@@ -38,8 +38,8 @@ public class Utilisateur implements Serializable {
 	private boolean enabled = true;
 	@OneToMany(mappedBy = "utilisateur")
 	private List<Avis> avis = new ArrayList<>();
-	//@OneToMany(mappedBy = "utilisateur")
-	//private List<Reservation> reservations = new ArrayList<>();
+	@OneToMany(mappedBy = "utilisateur")
+	private List<Reservation> reservations = new ArrayList<>();
 
 	public Utilisateur() {
 	}
@@ -52,13 +52,13 @@ public class Utilisateur implements Serializable {
 		this.avis = avis;
 	}
 
-	/*public List<Reservation> getReservations() {
+	public List<Reservation> getReservations() {
 		return reservations;
 	}
 
 	public void setReservations(List<Reservation> reservations) {
 		this.reservations = reservations;
-	}*/
+	}
 
 	public Utilisateur(String nomUtilisateur, String prenomUtilisateur, Set<Role> roles, String username,
 			String password, boolean enabled) {

@@ -8,7 +8,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "UTILISATEURS", schema = "gestion_salon_coiffure_db")
+@Table(name = "PRESTATIONS", schema = "gestion_salon_coiffure_db")
 public class Prestation {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
